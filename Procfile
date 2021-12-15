@@ -1,1 +1,1 @@
-web: bin/run-prod.sh
+web: bash bin/run-prod.sh
