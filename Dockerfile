@@ -10,3 +10,4 @@ RUN apt install libpq-dev -y
 COPY requirements.txt /homepage/
 RUN pip install -r requirements.txt
 COPY ./homepage/ /homepage/
+COPY ./bin/ /homepage/bin
