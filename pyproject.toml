@@ -8,6 +8,7 @@ authors = ["Yuriy Arhipov <yura@pragmatic.software>"]
 python = "^3.8"
 Django = "^3.2.9"
 psycopg2-binary = "^2.9.2"
+gunicorn = "^20.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
