@@ -1,1 +1,1 @@
-web: bin/run-prod.sh
+web: python manage.py runserver
