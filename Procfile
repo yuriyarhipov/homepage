@@ -1,1 +1,1 @@
-web: gunicorn homepage.wsgi
+web: gunicorn homepage.wsgi -b :8080
