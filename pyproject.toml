@@ -6,7 +6,7 @@ authors = ["Yuriy Arhipov <yura@pragmatic.software>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-Django = "^3.2.9"
+Django = "4"
 psycopg2-binary = "^2.9.2"
 gunicorn = "^20.1.0"
 
