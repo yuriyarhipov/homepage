@@ -11,4 +11,3 @@ COPY requirements.txt /homepage/
 RUN pip install -r requirements.txt
 COPY ./homepage/ /homepage/
 COPY ./Procfile /homepage/
-EXPOSE 8080
