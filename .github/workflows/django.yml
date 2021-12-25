@@ -30,5 +30,7 @@ jobs:
         pytest
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag homepage:${{env.TAG_NAME}}
+    - name: Dockerhub auth
+      run: docker login -u yuriyarhipov -p ${{env.DOCKER_HUB_TOKEN}}
     - name: Publish the image
       run: docker push yuriyarhipov/homepage:${{env.TAG_NAME}}
