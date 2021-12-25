@@ -35,7 +35,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag homepage:${{TAG_NAME}}
       env:
-          TAG_NAME: nightly-tag-${{ steps.date.outputs.date }}
+        TAG_NAME: nightly-tag-${{ steps.date.outputs.date }}
     - name: Dockerhub auth
       run: docker login -u yuriyarhipov -p ${{env.DOCKER_HUB_TOKEN}}
     - name: Publish the image
