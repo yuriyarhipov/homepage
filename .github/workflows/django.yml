@@ -17,6 +17,9 @@ jobs:
       DOCKER_HUB_TOKEN: ${{secrets.DOCKER_HUB_TOKEN}}
 
     steps:
+    - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
@@ -30,7 +33,9 @@ jobs:
       run: |
         pytest
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag homepage:${{env.TAG_NAME}}
+      run: docker build . --file Dockerfile --tag homepage:${{TAG_NAME}}
+      env:
+          TAG_NAME: nightly-tag-${{ steps.date.outputs.date }}
     - name: Dockerhub auth
       run: docker login -u yuriyarhipov -p ${{env.DOCKER_HUB_TOKEN}}
     - name: Publish the image
