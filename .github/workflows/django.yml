@@ -31,4 +31,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag homepage:${{env.TAG_NAME}}
     - name: Publish the image
-      run: docker push yuriyarhipov/homepage:$(echo ${env.TAG_NAME})
+      run: docker push yuriyarhipov/homepage:${{env.TAG_NAME}}
