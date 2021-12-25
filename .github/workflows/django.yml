@@ -13,7 +13,7 @@ jobs:
     strategy:
       max-parallel: 4
     env:
-      TAG_NAME: $(date +%s)
+      TAG_NAME: echo $(date +%s)
       DOCKER_HUB_TOKEN: ${{secrets.DOCKER_HUB_TOKEN}}
 
     steps:
