@@ -13,7 +13,7 @@ jobs:
     strategy:
       max-parallel: 4
     env:
-      TAG_NAME: echo $(date +%s)
+      TAG_NAME2: echo $(date +%s)
       DOCKER_HUB_TOKEN: ${{secrets.DOCKER_HUB_TOKEN}}
 
     steps:
@@ -33,7 +33,7 @@ jobs:
       run: |
         pytest
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag homepage:${{TAG_NAME}}
+      run: docker build . --file Dockerfile --tag homepage:${{env.TAG_NAME}}
       env:
         TAG_NAME: nightly-tag-${{ steps.date.outputs.date }}
     - name: Dockerhub auth
