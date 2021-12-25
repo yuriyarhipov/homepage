@@ -1,5 +1,7 @@
-from homepage import __version__
+from django.test import TestCase
 
 
-def test_version():
-    assert __version__ == '0.1.0'
+class HomePageTests(TestCase):
+
+    def test_base(self):
+        self.assertEqual(1,2)
