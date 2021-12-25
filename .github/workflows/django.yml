@@ -32,7 +32,7 @@ jobs:
       run: |
         pytest
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag homepage:${{env.TAG_NAME}}
+      run: docker build . --file Dockerfile --tag yuriyarhipov/homepage:${{env.TAG_NAME}}
       env:
         TAG_NAME: build-${{ steps.date.outputs.date }}
     - name: Dockerhub auth
