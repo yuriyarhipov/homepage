@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  caddy:
+    image: caddy
+
+  homepage:
+    image: yuriyarhipov/homepage:latest
+    depends_on:
+      - caddy
