@@ -100,3 +100,6 @@ tzdata==2021.5; sys_platform == "win32" and python_version >= "3.8" \
 wcwidth==0.2.5; python_version >= "3.5" \
     --hash=sha256:beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784 \
     --hash=sha256:c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83
+whitenoise==5.3.0; python_version >= "3.5" and python_version < "4" \
+    --hash=sha256:d963ef25639d1417e8a247be36e6aedd8c7c6f0a08adcb5a89146980a96b577c \
+    --hash=sha256:d234b871b52271ae7ed6d9da47ffe857c76568f11dd30e28e18c5869dbd11e12
