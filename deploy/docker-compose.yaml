@@ -2,9 +2,22 @@ version: "3.9"
 
 services:
   caddy:
-    image: caddy
+    image: caddy:2.4.6-alpine
+    restart: unless-stopped
+    ports:
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
 
   homepage:
-    image: yuriyarhipov/homepage:latest
+    image: yuriyarhipov/homepage
     depends_on:
       - caddy
+    command: gunicorn homepage.wsgi -b 0.0.0.0:8000
+
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /root/.docker/config.json:/config.json
+    command: --interval 30

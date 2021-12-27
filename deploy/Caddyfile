@@ -1,0 +1,5 @@
+yura.cc
+
+encode zstd gzip
+
+reverse_proxy homepage:8000
