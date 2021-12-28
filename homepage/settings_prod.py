@@ -1,6 +1,7 @@
 from homepage.settings import *
 
-ALLOWED_HOSTS = ["yura.cc", "www.yura.cc"]
+ALLOWED_HOSTS = ["yura.cc", ]
+CSRF_TRUSTED_ORIGINS = ['https://yura.cc',]
 
 DATABASES = {
     "default": {
