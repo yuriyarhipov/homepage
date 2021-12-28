@@ -1,5 +1,7 @@
 from homepage.settings import *
 
+ALLOWED_HOSTS = ["yura.cc", "www.yura.cc"]
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
