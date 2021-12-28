@@ -16,6 +16,9 @@ services:
       - caddy
     command: gunicorn homepage.wsgi -b 0.0.0.0:8000
     restart: unless-stopped
+    deploy:
+      labels:
+        com.centurylinklabs.watchtower.lifecycle.post-update: "make migrations"
 
   watchtower:
     image: containrrr/watchtower
