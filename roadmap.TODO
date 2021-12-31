@@ -1,8 +1,8 @@
 Main:
     ✔ add description @done(21-12-29 20:48)
     ✔ add list of projects @done(21-12-29 20:49)
-    ☐ add tailwind
-
+    ✔ add tailwind @done(21-12-31 03:49)
+    ☐ add projects page
 Blog:
     ✔ add list of posts @done(21-12-29 20:49)
     ☐ show posts <= current date
