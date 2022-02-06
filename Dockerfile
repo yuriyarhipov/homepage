@@ -6,4 +6,3 @@ WORKDIR /homepage/
 COPY requirements.txt /homepage/
 RUN pip install -r requirements.txt
 COPY . /homepage/
-ENTRYPOINT gunicorn homepage.wsgi -b 0.0.0.0:8000
